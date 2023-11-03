@@ -1,0 +1,157 @@
+.dashboard {
+  display: grid;
+  grid-template-areas: "header" "aside" "main" "main" "footer";
+  grid-template-rows: 130px 130px 1fr 1fr 130px;
+  text-align: center;
+}
+.dashboard header {
+  grid-area: header;
+  background-color: chartreuse;
+}
+.dashboard header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.dashboard header nav .brand figure {
+  width: 60px;
+}
+.dashboard header nav .brand figure img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+.dashboard header nav .p {
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.dashboard header nav .icon i {
+  width: 100px;
+  padding: 20px;
+}
+.dashboard header nav .menu {
+  display: none;
+}
+.dashboard aside {
+  grid-area: aside;
+  background-color: turquoise;
+  padding-top: 45px;
+}
+.dashboard main {
+  height: 100vh;
+  grid-area: main;
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard footer {
+  grid-area: footer;
+  background-color: cornflowerblue;
+  padding-top: 50px;
+}
+
+@media (min-width: 576px) {
+  .dashboard {
+    grid-template-areas: "header aside aside aside aside" "header main  main  main  main" "footer main  main  main  main";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 260px;
+  }
+  .dashboard header {
+    height: 100vh;
+  }
+  .dashboard header nav {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    gap: 30px;
+  }
+  .dashboard header nav .brand figure {
+    width: 100px;
+  }
+  .dashboard header nav .p {
+    font-size: 20px;
+    justify-content: center;
+  }
+  .dashboard header nav .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    list-style: none;
+  }
+  .dashboard header nav .icon {
+    display: none;
+  }
+  .dashboard aside .buscar {
+    margin: auto;
+  }
+  .dashboard footer {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 576px) and (min-width: 768px) {
+  .dashboard {
+    grid-template-areas: "header header header header header" "aside  main   main   main   main" "footer footer footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 280px;
+  }
+  .dashboard header {
+    height: 200px;
+  }
+  .dashboard header nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .dashboard header nav .brand figure {
+    width: 80px;
+  }
+  .dashboard header nav .brand .p {
+    padding-top: 20px;
+  }
+  .dashboard header nav .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    list-style: none;
+  }
+  .dashboard aside {
+    padding-top: 30px;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .dashboard aside .buscar {
+    margin: auto;
+  }
+  .dashboard main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    grid-template-areas: "card card" "card card";
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+  .dashboard main .card {
+    background-color: white;
+    color: green;
+    margin-top: 50px;
+    border: 1px solid red;
+    grid-area: "card";
+    height: 300px;
+    width: auto;
+  }
+  .dashboard main .card img {
+    max-width: 200px;
+  }
+  .dashboard footer {
+    padding-top: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
